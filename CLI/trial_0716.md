@@ -11,7 +11,7 @@ CLI 연습하기
 > 9. Practice_Folder 디렉토리 삭제하기
 > 10. Practice 디렉토리 삭제하기
 
-```
+``` Bash
 cd ~
 mkdir Practice
 cd Practice
