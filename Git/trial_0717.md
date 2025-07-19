@@ -1,29 +1,32 @@
-### github push/pull 연습 실습
-
-    1. 조장은 홈 디렉토리에 word-relay 폴더 생성
-    2. 조장은 Github에 word-relay 원격 저장소 생성 및 로컬 저장소와 연결
-    3. 조장은 로컬 저장소에 README.md 와 .gitignore 파일을 생성하고 push
-    4. 조장은 원격 저장소의 collaborator로 조원을 초대하기
-    5. 조원들은 해당 레포 clone 하기
-    ---
-    6. 조장과 조원은 add, commit, push, pull을 이용해서 끝말잇기 진행한다.
-    7. 자신이 끝말잇기 작성 후 push, push 완료 후 완료한 사실 팀원에게 공유 (끝말잇기는 README.md 에 작성한다.)
-    8. 전체 6바퀴 돌면 상황 종료
-    9. 전체 6바퀴가 돈 이후에도 연습을 한다면, 순서를 뺏거나 데이터를 섞어서 conflict 을 유발하면서 여러가지 실험을 하는 것도 추천!
+#### Git Status, Log, Add, Commit 연습하기
+>1. myFolder 라는 디렉토리를 만들고, Git 초 기화를 진행하세요.
+>2. myFolder 디렉토리로 이동 후, test.py 파 일을 만드세요
+>3. test.py을 staging area 로 추가하세요.
+>4. first commit 이라는 커밋명으로 커밋을 추가하세요.
+>5. InnerFolder 디렉토리를 생성하고, 해당 디렉토리 내부에 test2.py 와 test3.py, test4. py 파일을 생성하세요.
+>6. InnerFolder 안의 test2.py 를 staging area로 추가한 뒤 second commit 이라 는 커밋을 추가하세요.
+>7. InnerFolder 안에서 커밋에 추가되지 않은 나머지 파일을 third commit 으로 커밋을 추가하세요.
+>위 과정을 실행한 후
+>git status => nothing to commit,
+>working tree clean 문구가 나타나야 함
+>git log => third commit -> second
+>commit-> first commit 이 위에서부터 순 서대로 나타나야 함
 
 ```Bash
-cd ~
-mkdir word-relay
-cd word-relay
-touch README.md
-touch .gitignore
-git add README.md
-git commit -m '끝말잇기'
-git remote add origin remote_repo_url
-git push origin master
----
-git pull origin master
-git add README.md
-git commit -m '~'
-git push origin master
+mkdir myFolder
+cd myFolder
+git init
+touch test.py
+git add test.py
+git commit -m "first commit"
+mkdir InnerFolder
+cd InnerFolder
+touch test2.py test3.py test4.py
+git add test2.py
+git commit -m "second commit"
+git add test3.py
+git add test4.py
+git commit-m "third commit"
+git status
+git log
 ```
