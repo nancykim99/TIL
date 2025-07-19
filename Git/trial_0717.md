@@ -1,4 +1,5 @@
 #### Git Status, Log, Add, Commit 연습하기
+
 >1. myFolder 라는 디렉토리를 만들고, Git 초 기화를 진행하세요.
 >2. myFolder 디렉토리로 이동 후, test.py 파 일을 만드세요
 >3. test.py을 staging area 로 추가하세요.
@@ -13,7 +14,7 @@
 >commit-> first commit 이 위에서부터 순 서대로 나타나야 함
 
 ```Bash
-mkdir myFolder
+mkdir myFolders
 cd myFolder
 git init
 touch test.py
