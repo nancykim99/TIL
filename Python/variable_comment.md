@@ -2,7 +2,7 @@
 
 ### 프로그래밍이란
 
-**프로그램 (Program)** : 문제를 해결하기 위한 **명령어들의 집합**. 컴퓨터에게 내리는 명령어 묶음. 순서대로 주어진 지시사항들이 명령어들이며 그것들이 모이면 하나의 프로그램이 됨.
+**프로그램 (Program)** : 문제를 해결하기 위한 **명령어들의 집합**. 컴퓨터에게 내리는 명령어 묶음. 순서대로 주어진 지시사항들이 명령어들이며 그것들이 모이면 **하나의 프로그램**이 됨.
 
 **프로그래밍** : 그 명령어 묶음을 만드는 과정
 
@@ -80,9 +80,12 @@ python -i
 
 **변수명 규칙** : 
 - 영문 알파벳, 언더스코어 (_), 숫자로 구성.
-- 숫자로 시작할 수 없음.
+- 숫자로 시작할 수 없음. > 오류 남.
 - 대소문자를 구분.
-- 파이썬의 내부 예약어로 사용할 수 없는 이름들이 있음.
+- 파이썬의 내부 예약어 (reserved) 사용 불가능 > 오류는 나지 않음. 그러나 파이썬에서 의도한대로 작동하지 않게 됨. 내가 붙인 대로 작동함.
+  ```Python
+  ['False', 'None', 'True', '__peg_parser__', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+  ```
 
 **메모리 주소** : 컴퓨터가 특정 데이터 값을 정확히 찾아가기 위해 사용하는 기계적인 숫자 주소. 메모리의 모든 위치에는 그 위치를 고유하게 식별하는 메모리 주소가 존재함.
 
@@ -113,8 +116,8 @@ python -i
 **데이터 타입 분류 5가지** : 
 - Numeric Types : int(정수), float(실수), complex(복소수)
 - Text Sequence Type : str(문자열)
-- Sequence Types : list, tuple, range
-- Non-sequence Types : set, dict
+- Sequence Types : list, tuple, range. 연속적인 데이터
+- Non-sequence Types : set, dict. 비연속적인 데이터. 
 - 기타 : Boolean, None, Functions
 
 ### Numeric Types
@@ -208,7 +211,6 @@ print(a) #0.1
 ```
 name = '홍길동'
 age = 25
-
 greeting = f'{name}이고, 나이는 {age}입니다'
 
 # 홍길동이고, 나이는 25입니다
