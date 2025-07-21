@@ -74,11 +74,21 @@ Python 인터프리터를 사용하는 방법 :
 
 **변수명** : 사람이 데이터를 쉽게 다루기 위해 만드는 인간 친화적인 이름.
 
+```python
+# 리스트를 a에 할당하고, a를 b에 할당 시, a와 b 둘다 [1, 2, 3]을 가리킴
+a = [1, 2, 3]
+b = a
+
+# 정수를 a에 할당하고, a를 b에 할당 시, a와 b 각자 1을 가리킴
+a = 1
+b = a
+```
+
 **변수명 규칙** : 
 - 영문 알파벳, 언더스코어 (_), 숫자로 구성.
 - 숫자로 시작할 수 없음. > 오류 남.
 - 대소문자를 구분.
-- 파이썬의 내부 예약어 (reserved) 사용 불가능 > 오류는 나지 않음. 그러나 파이썬에서 의도한대로 작동하지 않게 됨. 내가 붙인 대로 작동함.
+- 파이썬의 내부 예약어 (reserved) 사용 불가능 > syntax error가 나고, 제대로 작동도 하지 않음.
   ```Python
   ['False', 'None', 'True', '__peg_parser__', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
   ```
