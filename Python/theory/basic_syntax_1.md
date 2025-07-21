@@ -126,6 +126,8 @@ b = a
 - Non-sequence Types : set, dict. 비연속적인 데이터. 
 - 기타 : Boolean, None, Functions
 
+`type(변수)`을 출력 : 데이터 타입을 확인하는 방법
+
 ### Numeric Types
 
 **숫자형 데이터 (Numeric Types)** : 프로그래밍에서 값을 계산하고, 수량을 세고, 데이터를 분석하는 등 가장 기본이 되는 데이터 타입.
