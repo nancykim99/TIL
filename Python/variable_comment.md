@@ -278,4 +278,4 @@ age = 10
 
 ### Python Tutor
 
-*[Python Tutor](https://pythontutor.com)* : 파이썬 코드가 한 줄씩 어떻게 실행되는지 눈으로 보여주는 시각화 도구.
+*[Python Tutor](https://pythontutor.com)* : 파이썬 코드가 한 줄씩 어떻게 실행되는지 눈으로 보여주는 시각화 도구. 값이 어떻게 바뀌는지 확인 가능.
