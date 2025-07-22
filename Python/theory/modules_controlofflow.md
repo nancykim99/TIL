@@ -176,4 +176,152 @@ range 순회 : 특정 숫자 범위 만큼 반복하고 싶을 때 range 함수 
     for i in range(n):
         print(i)
     ```
+딕셔너리 순회 : dict 자료형은 비시퀀스 자료형으로 반복 순서가 보장되지 않음을 유의
 
+    ```python
+    for key in my_dict:
+        print(key)
+        print(my_dict[key])
+    ```
+
+인덱스로 리스트 순회 : 리스트의 요소가 아닌 인덱스로 접근하여 해당 요소들을 변경하기.
+- 인덱스를 사용하면 리스트의 원하는 위치에 있는 값을 읽거나 변경할 수 있음
+
+    ```python
+    numbers = [4, 6, 10, -8, 5]
+
+    for i in range(len(numbers)):
+        numbers[i] = numbers[i] * 2
+    
+    print(numbers) # [8, 12, 20, -16, 10]
+    ```
+
+중첩 리스트 순회 : 안쪽 리스트 요소에 접근하려면 바깥 리스트를 순회하면서 중첩 반복을 사용해 각 안쪽 반복을 순회
+
+    ```python
+    for elem in elements:
+        for item in elem:
+            print(item)
+    ```
+
+### while statement
+
+while 반복문 : 주어진 조건식이 참(True)인 동안 코드를 반복해서 실행 == 조건식이 거짓(False)가 될 때 까지 반복해서 실행
+- 반드시 종료 조건이 필요 : 종료조건이 없는 경우 무한 반복에 빠지게 되어 원하는 동작을 하지 않게 되므로 반드시 종료 조건을 설정해야 함
+- 조건이 언젠가는 반드시 False가 되도록 반복문 내부에서 변수 값을 변화시키는 것이 좋음
+- while문을 시작하기 전에 조건에서 사용할 변수를 반드시 초기화해야 오류를 방지할 수 있음
+- break문을 사용하면 반복문을 안전하게 종료할 수 있음
+
+```python
+while 조건식:
+    코드 블록
+```
+
+while문의 반복 원리 :
+- while의 조건식 확인 : 
+    - 조건식이 참(True)면 코드 블록 실행
+    - 조건식이 거짓(False)면 반복 종료
+- 코드 블록 실행이 마무리되면 다시 while 조건식 확인
+
+사용자 입력에 따른 반복 : while문을 사용한 특정 입력 값에 대한 종료 조건 활용하기
+
+```python
+while 조건식 1:
+    if 조건식 2:
+        print()
+    else:
+        print()
+```
+
+### 반복 제어
+
+반복 제어 : for문과 while문은 매 반복마다 본문 내 모든 코드를 실행하지만 때때로 일부만 실행하는 것이 필요할 때가 있음
+- 반드시 반복문 내에서 사용해야 함
+- 중첩 반복문인 경우, 해당 키워드가 작성된 코드 블록의 반복 흐름만 제어함
+- 과도하게 사용하면 가독성이 떨어지므로 필요한 상황에서만 사용해야 함
+
+반복 제어 키워드 : 
+- break 키워드 : 해당 키워드 만나면, 남은 코드를 무시하고 반복 즉시 종료. 반복을 끝내야할 명확한 조건이 있을 때 사용.
+    ```python
+    for i in range(10):
+        if i == 5:
+            break
+        print(i)
+    ```
+- continue 키워드 : 해당 키워드 만나면, 다음 코드는 무시하고 다음 반복을 수행
+    ```python
+    for i in range(10):
+        if i % 2 == 0:
+            continue
+        print(i)
+    ```
+
+빈 코드 블록 키워드 : 
+- pass 키워드 : '아무 동작도 하지 않음'을 명시적으로 나타내는 키워드
+    - 반복 데어가 아닌 코드의 틀을 유지하거나 나중에 내용을 채우기 위한 용도로 사용
+    - 코드를 비워주면 오류가 발생하기 때문에 pass 키워드 사용
+    - 함수, 조건문에서도 사용 가능
+
+    ```python
+    if condition:
+        pass
+    else:
+        pass
+    ```
+
+### map & zip
+
+map 함수 `map(function, iterable)` : 반복 가능한 데이터구조(iterable)의 모든 요소에 function을 적용하고, 그 결과 값들을 map object로 묶어서 반환
+- map object : 결과를 하나씩 꺼내 쓸 수 있는 반복 가능한 객체 자료형. 전체 값을 확인하려면 list나 tuple로 형변환을 해줘야 함.
+- split 메서드 : 문자열을 지정한 기준 문자 (기본은 공백)을 기준으로 잘라서, 잘린 문자들을 리스트로 반환해주는 문자열 메서드
+
+zip 함수 `zip(*iterables)` : zip 함수는 여러 개의 반복 가능한 데이터 구조를 묶어서, 같은 위치에 있는 값들을 하나의 tuple로 만든 뒤 그것들을 모아 zip object로 반환하는 함수
+- zip object : 짝지어진 결과(tuple)을 하나씩 꺼내 쓸 수 있는 반복 가능한 객체 자료형. 전체 값을 확인하려면 list나 tuple로 형변환을 해줘야 함
+
+```python
+# 여러 개의 리스트를 동시에 조회할 때
+for student_score in zip(kr_scores, math_scores, en_scores):
+    print(student_scores)
+# 0번 인덱스 값
+# 1번 인덱스 값
+# 2번 인덱스 값...
+
+# 2차원 리스트와 같은 컬럼(열) 요소를 동시에 조회할 때, 실행 결과가 전치 행렬과 동일함
+scores = [
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90],
+]
+
+for score in zip(*scores):
+    print(scores)
+# (10, 40, 70)
+# (20, 50, 80)
+# (30, 60, 90)
+```
+
+### 모듈 내부 살펴보기
+
+모듈 내부 살펴보기 : 내장 함수 `help`를 사용해 모듈에 무엇이 들어있는지 확인 가능
+
+### for-else
+
+for-else : for 루프가 break를 만나 중단되지 않고, 끝까지 정상적으로 완료되어을 때만 else 블록이 실행
+- break 문을 만나 반복문이 종료되면 else의 코드 블록은 실행되지 않음
+- 모든 반복을 정상적으로 수행해야 else 블록이 실행됨 > 검증 로직에서 활용
+- while-else문도 내용 동일
+
+### enumerate
+
+enumerate 함수 `enumerate(iterable, start=0)` : iterable 객체의 각 요소에 대해 인덱스와 값을 함께 반환하는 내장함수
+
+```python
+fruits = ['apple', 'banana', 'cherry']
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+
+# 0 apple
+# 1 bananas
+# 2 cherry
+```
