@@ -444,8 +444,29 @@ def make_list (string) :
     return list(string)
 
 # 234
+pickup_even([3, 4, 5, 6, 7, 8])
 
+# 틀린 답
+def pickup_even(list):
+    even_num = []
+    for num in list:
+        even_num.append(num % 2 == 0)
+    return even_num
 
+# 정답
+def pickup_even(list):
+    even_num = []
+    for num in list:
+        if num % 2 == 0:
+            even_num.append(num)
+    return even_num
+
+# 235
+convert_int("1,234,567")
+
+# 답
+def convert_int(string):
+    return int(string.replace(',',''))
 
 
 
