@@ -105,11 +105,11 @@ print_coin()
 # 203
 
 # 틀린 답
-for i range(100):
+for i in range(100):
     print_coin(i) # i를 왜 넣었니...
 
 # 맞는 답
-for i range(100): # 100번
+for i in range(100): # 100번
     print_coin() # 함수 호출
 
 # 204
