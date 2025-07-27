@@ -1,5 +1,5 @@
 ## TIL
-Record of everything I learned everyday   
+Record of everything I learned everyday 🖥️   
 Currently focusing on Python and Algorithm
 
 ---
