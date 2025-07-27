@@ -141,6 +141,36 @@ message()
 # A
 # B
 
+# 207
+print("A")
+def message():
+    print("B")
+print("C")
+message()
+
+# 답
+# A
+# C
+# B
+
+# 208
+print("A")
+def message1():
+    print("B")
+print("C")
+def message2():
+    print("D")
+message1()
+print("E")
+message2()
+
+# 답
+# A
+# C
+# B
+# E
+# D
+
 
 
 
