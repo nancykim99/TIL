@@ -20,6 +20,8 @@ Links in this README file leads to each file in TIL 🔗
 ### Contents
 ---
 
+### [📌 Everyday Log]()
+
 #### [📌 AI](https://github.com/nancykim99/TIL/tree/09375c5ad0b81bb2e65a3f4c30df86484ae99947/AI)
 
 - [API](https://github.com/nancykim99/TIL/blob/09375c5ad0b81bb2e65a3f4c30df86484ae99947/AI/API.md)
