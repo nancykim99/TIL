@@ -468,8 +468,71 @@ convert_int("1,234,567")
 def convert_int(string):
     return int(string.replace(',',''))
 
+# 236
+def 함수(num) :
+    return num + 4
 
+a = 함수(10)
+b = 함수(a)
+c = 함수(b)
+print(c)
 
+# 답
+# 14
+# 18
+# 22
+
+# 237
+def 함수(num) :
+    return num + 4
+
+c = 함수(함수(함수(10)))
+print(c)
+
+# 답
+# 22
+
+# 238
+def 함수1(num) :
+    return num + 4
+
+def 함수2(num) :
+    return num * 10
+
+a = 함수1(10)
+c = 함수2(a)
+print(c)
+
+# 답 : 140
+
+# 239
+def 함수1(num) :
+    return num + 4
+
+def 함수2(num) :
+    num = num + 2
+    return 함수1(num)
+
+c = 함수2(10)
+print(c)
+
+# 답 : 16
+
+# 240
+def 함수0(num) :
+    return num * 2
+
+def 함수1(num) :
+    return 함수0(num + 2)
+
+def 함수2(num) :
+    num = num + 10
+    return 함수1(num)
+
+c = 함수2(2)
+print(c)
+
+# 답 : 28
 
 
 
