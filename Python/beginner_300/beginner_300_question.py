@@ -413,6 +413,38 @@ my_print(b=100, a=200)
 # 오른쪽: 100
 
 # 231
+def n_plus_1 (n) :
+    result = n + 1
+
+n_plus_1(3)
+print (result)
+
+# 답
+# 에러?
+# NameError: name 'result' is not defined
+# 함수 내 사용한 변수는 함수 밖에서 접근 불가 > 계산한 값을 전달하기 위해 return 사용 필요
+
+# 232
+make_url("naver")
+
+def make_url(string):
+    return "www.", string, ".com"
+
+# 233
+make_list("abcd")
+
+def make_list(string):
+    list = []
+    for str in string:
+        list.append(str)
+    return list
+
+# 다른 답
+def make_list (string) :
+    return list(string)
+
+# 234
+
 
 
 
