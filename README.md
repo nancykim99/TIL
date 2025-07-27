@@ -1,6 +1,7 @@
 ## TIL
 Record of everything I learned everyday 🖥️   
-Currently focusing on Python and Algorithm
+Currently focusing on Python and Algorithm 📚  
+Links in this README file leads to each file in TIL 🔗
 
 ---
 
@@ -19,15 +20,15 @@ Currently focusing on Python and Algorithm
 ### Contents
 ---
 
-#### AI
+#### 📌 AI
 
-#### CLI
+#### 📌 CLI
 
-#### Git
+#### 📌 Git
 
-#### Markdown
+#### 📌 Markdown
 
-#### [Python](https://github.com/nancykim99/TIL/tree/9ecde71cb9a0c4e0d3324c034a7f703f7ee94f45/Python)
+#### [📌 Python](https://github.com/nancykim99/TIL/tree/9ecde71cb9a0c4e0d3324c034a7f703f7ee94f45/Python)
 - [theory](https://github.com/nancykim99/TIL/tree/9ecde71cb9a0c4e0d3324c034a7f703f7ee94f45/Python/theory) : 이론 정리 및 공부
     - [basic_syntax_1](https://github.com/nancykim99/TIL/blob/9ecde71cb9a0c4e0d3324c034a7f703f7ee94f45/Python/theory/basic_syntax_1.md) : Python이란, 표현식, 값, 변수, 할당, 메모리, 데이터타입, 숫자형 데이터, 연산자, 시퀀스타입 데이터, 문자열, 인덱스, 슬라이싱, Style Guide, 주석, Python Tutor
     - [basic_syntax_2](https://github.com/nancykim99/TIL/blob/9ecde71cb9a0c4e0d3324c034a7f703f7ee94f45/Python/theory/basic_syntax_2.md) : 
