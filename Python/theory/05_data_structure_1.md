@@ -97,14 +97,11 @@
 - 생성 후에도 그 내용을 수정할 수 있음
 - 객체의 내용이 변경되어도 같은 메모리 주소를 유지
 
-![image.png](attachment:fea49cee-917e-400e-af9d-da19d3bbdea2:5502c5f2-f241-4245-b1c0-16b4e18568d8.png)
-
 **불변 객체 (immutable**) : 생성 후 **내용을 변경할 수 없는 객체**. **int, float, str, tuple**
 
 - 생성 후 그 값을 변경할 수 없음
 - 새로운 값을 할당하면 새로운 객체가 생성되고, 변수는 그 객체를 참조하게 됨
 
-![image.png](attachment:11cb6a69-90b5-4669-af90-a45eb21c1a23:image.png)
 
 **변수 할당** : 파이썬에서 **객체에 대한 참조를 생성하는 과정**
 
@@ -154,16 +151,10 @@
 1. 리스트 슬라이싱 **`:` 은 원본 리스트와 동일한 내용의 새로운 리스트를 만듬**
     - 새로운 리스트에 복사되는 것은 요소 자체의 값이 아니라 해당 요소들이 참조하는 주소
     
-    ![image.png](attachment:dabf3a38-b74b-4ed6-98bf-d34f5a722539:image.png)
-    
 2. `copy()` 메서드 **`list.copy()` 는 원본 리스트와 동일한 내용을 가진 새로운 리스트 객체를 반환**함
     - 복사된 새 리스트의 요소들은 원본 리스트의 요소들과 동일한 객체들을 참조함
     
-    ![image.png](attachment:648c24ce-0f8a-4c53-be3b-ebb3a905a166:image.png)
-    
 3. `list()` 함수
-    
-    ![image.png](attachment:5820b658-f644-4e08-b3bd-2ba7356458b5:image.png)
     
 
 **얕은 복사의 한계** : 2차원 리스트와 같이 변경 가능한 객체 안에 변경 가능한 객체가 있는 경우
@@ -184,8 +175,6 @@
     
     print(f'a[2]와 b[2]가 같은 객체인가? {a[2] is b[2]}') # True
     ```
-    
-    ![image.png](attachment:9327c188-0e81-49aa-83b0-c507f390d93d:image.png)
     
 
 1차원 리스트와 다차원 리스트에서의 **차이점** : 
@@ -220,8 +209,6 @@ print(b) # [1, 2, [3, 100, 5]]
 print(f'a[2]와 b[2]가 같은 객체인가? {a[2] is b[2]}') # False
 ```
 
-![image.png](attachment:cb2d4a5a-5e46-4b43-82ea-147e294060a9:image.png)
-
 ## List Comprehension
 
 **List comprehension** : 간결하고 효율적인 리스트 생성 방법
@@ -235,10 +222,6 @@ print(f'a[2]와 b[2]가 같은 객체인가? {a[2] is b[2]}') # False
 - 순회 가능한 객체 : 반복할 데이터
 - 조건식 : 필터링 조건
 - if 조건식 : 선택사항. 조건 명시 하지않을 시 모든 요소에 대해 표현식이 적용됨
-
-![image.png](attachment:70371712-f86b-47b6-9422-35894df421fe:image.png)
-
-![image.png](attachment:0b27a752-71cd-4380-b9a1-4ca48013ec94:image.png)
 
 **성능 비교** : 
 
