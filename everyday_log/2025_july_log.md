@@ -9,6 +9,11 @@
 ---
 
 ### July 28 Monday
+1. solved check question until today's lesson
+2. finished practice questions for today's lesson
+3. pre-studied python data structure 2 and OOP 1
+4. re-coded lesson practice code from basic syntax 1 to
+5. updated TIL/data structure 1
 
 ### July 29 Tuesday
 
