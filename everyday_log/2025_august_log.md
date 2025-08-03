@@ -1,14 +1,7 @@
 ## 📅 August 2025
 
-### August 01 Friday
-
-### August 02 Saturday
-
-### August 03 Sunday
-
----
-
 ### August 04 Monday
+1. solved backjoon question 1330
 
 ### August 05 Tuesday
 
